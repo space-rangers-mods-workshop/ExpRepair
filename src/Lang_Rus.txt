@@ -31,7 +31,7 @@ FormShip ^{
 }
 Script ^{
     Mod_ExpRepair ^{
-        130=<0>
+        0=<0>
         BK ^{
             ArtsNoNeedInRepair=---
             ArtsNoNeedInRepair=---
