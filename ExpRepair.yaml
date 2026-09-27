@@ -1,0 +1,61 @@
+mod: ExpRepair
+
+# public — keys mirror ModuleInfo.txt; rendered into mod/ModuleInfo.txt by build_mod.py
+# and into the card README.md by generate_card.py.
+info:
+  Name: ExpRepair
+  Author: "uhanich, Mik, Huk, Klaxons, Alex Lester, ringill"
+  Conflict: ""
+  Dependence: ""
+  Priority: 1
+  Section: Разное
+  SectionEng: Miscellaneous
+  Languages: Rus,Eng
+  SmallDescription: |-
+    Добавляет дополнительные опции ремонта на станции НБ, ВБ и ПБ, а также позволяет производить полноценный ремонт на ТЦ
+    (Мод можно <color=0,150,15>подключать</color>/<color=150,0,15>отключать</color> в течение партии)
+  SmallDescriptionEng: |-
+    Adds additional repair options at Research Stations, Military Bases and Pirate Bases, and also allows you to carry out full repairs at a Technology Center
+  FullDescription: |-
+    Мод добавляет дополнительные опции ремонта (помимо стандартного) на НБ, ВБ и ПБ, делая процесс более удобным и быстрым для игрока.
+    <clr><clrEnd>
+    <color=0,50,200>Дополнительные опции ремонта:</color>
+    - Ремонт всего оборудования, установленного в слотах (стандартная опция)
+    - Ремонт всего оборудования, входящего в состав всех созданных комплектаций
+    - Ремонт всех артефактов на корабле, включая те, что находятся в трюме (доступно только на НБ и ПБ)
+    - Ремонт всех зондов в трюме
+    - Ремонт вообще всего оборудования, артефактов и зондов на корабле, включая то, что находится в трюме
+    - Ремонт напарников (кроме пиратов/изменников/повстанцев на ВБ и спецагентов на ПБ) и транклюкаторов (в ангаре или в трюме)
+    <clr><clrEnd>
+    <color=0,50,200>Полноценный ремонт на ТЦ:</color>
+    - С данным модом на всех технологических центрах (добавляются в моде ExpTC) становится доступен полноценный ремонт стандартного и нестандартного оборудования
+    - Стандартный ремонт обходится на ТЦ на 20% дешевле рыночной (ангарной) цены, а нестандартный - на 15% дороже
+    - При ремонте на ТЦ учитывается любое изношенное оборудование, а не только оборудование, изношенное, как минимум, на 10%
+  FullDescriptionEng: |-
+    The mod adds additional repair options (besides the standard one) on Research Stations, Military Bases and Pirate Bases, making the process more convenient and faster for the player.
+    <clr><clrEnd>
+    <color=0,50,200>Additional repair options:</color>
+    - Repair of all equipment installed in slots (standard option)
+    - Repair of all equipment included in all created kits
+    - Repair of all artifacts on the ship, including those in the hold (available only on Research Stations and Pirate Bases)
+    - Repair of all probes in the hold
+    - Repair of all equipment, artifacts and probes on the ship, including what is in the hold
+    - Repair of partners (except for pirates/traitors/rebels on Military Bases and special agents on Pirate Bases) and tranclucators (in the hangar or in the hold)
+    <clr><clrEnd>
+    <color=0,50,200>Full repairs at a Technology Center:</color>
+    - With this mod, full repairs of standard and non-standard equipment become available at all Technology Centers (added in the ExpTC mod)
+    - Standard repairs at a Technology Center are 20% cheaper than the market (hangar) price, and non-standard repairs are 15% more expensive
+    - When repairing at a Technology Center, any worn-out equipment is taken into account, and not just equipment that is worn out by at least 10%
+
+# public — the sources this mod is based on / derived from (the museum exhibit of the original)
+based_on:
+  - source: 🏛️ https://github.com/space-rangers-mods-museum/ExpRepair__redux
+    note: ExpRepair - uhanich, Mik, Huk, Klaxons, Alex Lester; the REDUX edition of the pack, the newest of the two shipped builds
+
+# public — what this workshop edition changed relative to its source
+changes:
+  - "Rebuilt the English `CFG/Eng/Lang.dat` from the Russian tree. The REDUX edition's English is decorative — its `ModuleInfo` says so itself with the `Warning! Untranslated staff!` mark — so the whole English was rebuilt: 1138 Cyrillic strings translated in the game's voice, the rest copied verbatim, and the key set is identical to the Russian tree (1506 paths)."
+  - "Signed every `CFG/*.dat` (`Main.dat`, `CacheData.dat`, both `Lang.dat`) — they ship unsigned, and one unsigned `.dat` disqualifies the run from achievements."
+  - "Tidied the `ModuleInfo` description: dropped the stale `Warning! Untranslated staff!` mark, and rendered the station names with the base game's own terms (`НБ`/`ВБ`/`ПБ` → Research Station / Military Base / Pirate Base, `ТЦ` → Technology Center)."
+  - "Repointed the mod's own `Mods\\Expansion\\ExpRepair\\…` path in `src/CacheData.txt` to `Mods\\Miscellaneous\\ExpRepair\\…` (the workshop deploys every mod under `Miscellaneous`)."
+  - "Dropped the loose text that came inside the pack (`DATA/Script/Mod_ExpRepair.txt`): the readable source is the one we decompiled ourselves (`src/Mod_ExpRepair.rson`)."
